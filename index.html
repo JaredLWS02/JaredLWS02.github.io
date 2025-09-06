@@ -7,60 +7,141 @@
 </head>
 <body style="background-color:  darkslategrey;">
     <style type="text/css">
-        *{
-            text-decoration:none;
-        }
-        .navBar{
-            background: lightslategray; font-family: calibri; padding-left: 12px; border-radius: 8px; height: 60px;
-        }
-        .navDiv{
-            display: flex; align-items: center; justify-content: space-between;
-        }
-        .Portfolio a{font-size: 40px; font-weight: 600; color: white;
-        }
-        li{
-            list-style: none; display: inline-block;
-        }
-        li a{
-            color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
-        }
-        button{
-            background-color: black; margin-right: 25px; border-radius: 20px; padding: auto; width:90px;
-        }
-        button a{
-            color: white; font-weight: bold; font-size: 15px;
-        }
-        .game{
-            background-color: azure;
-            display: flex;
-            border: 4px solid black; 
-            border-radius: 20px;
-            width: 1480px;
-            padding: 10px;
-        }
-        .game:hover{
-            border: 2px solid darkgray;
-        }
-        .game img{
-            border-radius: 20px;
-            width: 300px;
-            height: auto;
-        }
-        .game h2{
-            padding-left: 30px;
-            text-decoration: underline;
-        }
-        .game p{
-            font-size: 20px;
-            padding-left: 30px;
-        }
-        .tb{
-            border-radius: 8px;
-            background-color: lightsteelblue;
-             border: 3px solid black; 
-             padding: 10px;
-            flex-grow: 1;  
-        }
+        * {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkslategrey;
+  margin: 0;
+  font-family: calibri, sans-serif;
+}
+
+/* Navbar */
+.navBar {
+  background: lightslategray;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.navDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Portfolio a {
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+li a {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+button {
+  background-color: black;
+  border-radius: 20px;
+  padding: 8px 16px;
+  border: none;
+  margin-left: 10px;
+}
+
+button a {
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Game project cards */
+.game {
+  background-color: azure;
+  display: flex;
+  flex-wrap: wrap;
+  border: 4px solid black;
+  border-radius: 20px;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.game:hover {
+  border: 2px solid darkgray;
+}
+
+.game img {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.tb {
+  flex: 1;
+  min-width: 250px;
+  border-radius: 8px;
+  background-color: lightsteelblue;
+  border: 3px solid black;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+/* Responsive text centering */
+.centered {
+  text-align: center;
+  color: white;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .navDiv {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .game {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tb {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Portfolio a {
+    font-size: 24px;
+  }
+
+  li a {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  button {
+    width: auto;
+    padding: 6px 12px;
+  }
+}
+
     </style>
     <nav class="navBar">
         <div class="navDiv">
@@ -81,8 +162,12 @@
     <p style="color: white; text-align: center; font-size: 40px;">& here are my</p>
     <h1 style="color: white; text-align: center; font-size: 50px;">My Projects</h1>
     <br>
-    <img src="/images/logo/stencylLogo.png" height="100" width="100" style="padding-left: 700px;">
-    <h2 style="color: white; padding-left: 685px;">Using Stencyl</h2>
+
+    <div class="centered">
+        <img src="/images/logo/stencylLogo.png" height="100" width="100">
+        <h2>Using Stencyl</h2>
+    </div>
+
     <br>
 
     <a href="https://0135860.wixsite.com/lee-wen-sheng/soccer-pong" target="_blank">
@@ -120,10 +205,10 @@
     </a>
 
     <br><hr><br>
-
-    <img src="/images/logo/unityLogo.png" height="100px" width="200px" style="padding-left: 650px;">
-    <h2 style="color: white; padding-left: 685px;">Using Unity</h2>
-
+    <div class="centered">
+        <img src="/images/logo/unityLogo.png" height="100px" width="200px">
+        <h2>Using Unity</h2>
+    </div>
     <br>
 
     <a href="https://lee-wen-sheng.itch.io/mazein-20" target="_blank">
